@@ -1,5 +1,26 @@
 function replace_image(element){
-    var src = 'http://placekitten.com/g/' + $(element).width() + '/' + $(element).height();
+
+    var choices = [
+        'http://placekitten.com/',
+        'http://www.fillmurray.com/',
+        'http://www.stevensegallery.com/',
+        'http://www.placecage.com/',
+        'http://lorempixel.com/',
+        'http://placebeard.it/',
+        'http://placezombie.com/',
+        'http://placebabies.com/',
+        'http://baconmockup.com/',
+        'http://www.fillmurray.com/',
+        'http://www.fillmurray.com/g/',
+        'http://www.placecage.com/',
+        'http://www.placecage.com/c/',
+        'http://www.placecage.com/g/',
+        'http://placebear.com/'
+    ];
+
+    var choice = choices[Math.floor(Math.random() * choices.length)];
+
+    var src = choice + $(element).width() + '/' + $(element).height();
     $(element).attr("src", src);
 }
 
